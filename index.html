@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#17151d">
+    <title>a little ghost's love letter ♡</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stars" id="stars"></div>
+
+    <header class="topbar">
+        <span class="brand">☾ a little ghost's letter</span>
+        <button id="musicBtn" class="music-btn">♫ music off</button>
+    </header>
+
+    <main>
+        <!-- SCREEN 1: HOME -->
+        <section class="screen active" id="home">
+            <p class="eyebrow">✧ a tiny surprise for you ✧</p>
+
+            <h1>someone has a<br>
+                <span>little something</span><br>
+                for you...
+            </h1>
+
+            <p class="subtitle">
+                a little letter from a little ghost. ♡
+            </p>
+
+            <div class="mimikyu-doodle">
+                <span class="doodle-star star-one">✧</span>
+                <img
+    src="mimikyu.png"
+    alt="Mimikyu"
+    class="ghost"
+            >
+                <span class="doodle-star star-two">☾</span>
+                <p>i made this just for you...</p>
+            </div>
+
+            <button class="envelope-button" id="openBtn"
+                aria-label="Open the envelope">
+                <div class="envelope-art" id="envelope">
+                    <div class="envelope-back"></div>
+                    <div class="envelope-paper">a letter for you ♡</div>
+                    <div class="envelope-front"></div>
+                    <div class="envelope-flap"></div>
+                    <div class="bow">🎀</div>
+                    <div class="seal">♥</div>
+                </div>
+            </button>
+
+            <p class="hint" id="hint">tap the envelope to open it</p>
+            <div class="decor">☾　✧　♡　✧　☽</div>
+        </section>
+
+        <!-- SCREEN 2: LETTER -->
+        <section class="screen" id="letterScreen">
+            <div class="paper">
+                <div class="paper-decoration">୨୧</div>
+                <p class="eyebrow">a message from my heart</p>
+                <h2>dear you, ♡</h2>
+
+                <div class="typed-area">
+                    <span id="typedText"></span><span class="cursor" id="cursor">|</span>
+                </div>
+
+                <button class="btn secondary hidden" id="skipTyping">
+                    read the whole letter
+                </button>
+
+                <div class="letter-bottom">
+                    <span>with all my love,</span>
+                    <span class="signature">your little ghost ♡</span>
+                </div>
+            </div>
+
+            <button class="btn next hidden" id="toMemories">
+                turn the page → ♡
+            </button>
+        </section>
+
+        <!-- SCREEN 3: MEMORIES, SECRETS AND COUNTDOWN -->
+        <section class="screen" id="memories">
+            <p class="eyebrow">✧ little pieces of us ✧</p>
+            <h2>our little world ♡</h2>
+            <p class="subtitle">
+                some moments i'd keep forever.
+            </p>
+
+            <div class="gallery">
+                <figure class="photo-card">
+                    <img src="photo1.jpg" alt="Favorite memory">
+                    <div class="photo-placeholder">♡<br>our memory</div>
+                    <figcaption>one of my favorites</figcaption>
+                </figure>
+
+                <figure class="photo-card tilted">
+                    <img src="photo2.jpg" alt="A special moment">
+                    <div class="photo-placeholder">✧<br>a little moment</div>
+                    <figcaption>you make things better</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <img src="photo3.jpg" alt="Another memory">
+                    <div class="photo-placeholder">☾<br>just us</div>
+                    <figcaption>if only time could pause</figcaption>
+                </figure>
+            </div>
+
+            <p class="small-note">
+                three little memories, kept close to my heart ♡
+            </p>
+
+            <div class="divider">✧ ─── ♡ ─── ✧</div>
+
+            <h2>little secrets</h2>
+            <p class="subtitle">there are things i haven't told you yet...</p>
+
+            <div class="secret-grid">
+                <button class="secret" data-message="You make ordinary days feel special. Even the smallest moments mean more when you're part of them. ♡">
+                    ♡<span>open me</span>
+                </button>
+
+                <button class="secret" data-message="If I could choose again, I'd still want to meet you, know you, and make more memories with you. ✧">
+                    ✧<span>open me</span>
+                </button>
+
+                <button class="secret" data-message="You deserve gentleness, patience, happiness, and every beautiful thing this world can offer. ☾">
+                    ☾<span>open me</span>
+                </button>
+            </div>
+
+            <div class="secret-message hidden" id="secretMessage">
+                <p id="secretText"></p>
+                <button class="text-btn" id="closeSecret">fold this note ♡</button>
+            </div>
+
+            <div class="divider">☾ ─── ✧ ─── ☽</div>
+
+            <h2>counting down to us</h2>
+            <p class="subtitle" id="countdownLabel">until our special day ♡</p>
+
+            <div class="countdown">
+                <div><strong id="days">00</strong><span>days</span></div>
+                <div><strong id="hours">00</strong><span>hours</span></div>
+                <div><strong id="minutes">00</strong><span>minutes</span></div>
+                <div><strong id="seconds">00</strong><span>seconds</span></div>
+            </div>
+
+            <button class="btn next" id="toFinal">
+                one last thing... ♡ →
+            </button>
+        </section>
+
+        <!-- SCREEN 4: FINAL SURPRISE -->
+        <section class="screen" id="final">
+            <div class="final-stars">✧　☾　♡　☽　✧</div>
+            <p class="eyebrow">before you go...</p>
+
+            <h1>you are my<br>
+                <span>favorite</span><br>
+                little miracle.
+            </h1>
+
+            <div class="gift" id="gift">
+                <div class="gift-bow">🎀</div>
+                <div class="gift-box">♡</div>
+            </div>
+
+            <p class="subtitle">i saved one last little thing for you.</p>
+
+            <button class="btn next" id="revealBtn">
+                unwrap your surprise ♡
+            </button>
+
+            <div id="finalMessage" class="final-message hidden">
+                <div class="final-card">
+                    <span class="big-heart">♡</span>
+                    <h2>if you ever forget...</h2>
+
+                    <p>
+                        somewhere in this big, busy world,
+                        there will always be a little corner
+                        of it where you are remembered,
+                        appreciated, and loved.
+                    </p>
+
+                    <p>
+                        even a little ghost who hides beneath
+                        a rag can have a heart full of love.
+                        and if there's one thing i want you
+                        to know, it's that you matter more
+                        than you realize.
+                    </p>
+
+                    <p class="signature">
+                        you are loved. always. ♡
+                    </p>
+
+                    <div class="end-decoration">☾　✧　🎀　✧　☽</div>
+                </div>
+
+                <button class="btn secondary" id="restartBtn">
+                    read it all again ↺
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <audio id="music" src="music.mp3" loop preload="none"></audio>
+
+    <footer>made with a little bit of magic ♡</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
